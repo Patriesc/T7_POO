@@ -1,4 +1,4 @@
-# T7_POO
+# Tema 7: Programación Orientada a Objetos
 Entrega ejercicios tema 7
 
 Entrega realizada por Chiara Boccaletti, Patricia Sanz Escurin y Manuel Anton Carrasco.
