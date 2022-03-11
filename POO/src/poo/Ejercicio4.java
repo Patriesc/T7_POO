@@ -24,27 +24,38 @@ public class Ejercicio4 extends Cuadricula {
 
 
             //Realizamos el movimiento del jugador mientras no acierte
-            do {
-                try {
-                    System.out.println("¿En qué fila desea disparar?");
-                    int disparoFila = teclado.nextInt() - 1;
-                    System.out.println("¿En qué columna desea disparar?");
-                    int disparoCol = teclado.nextInt() - 1;
-                    aciertoJugador = tableroMaquina.disparar(disparoFila, disparoCol);
 
-                    //Realizamos la jugada de la máquina en el caso de que el jugador haya fallado
-                    if (!aciertoJugador) {
-                        System.out.println("Agua");
-                        int disparoMaquinaFila = (int) (Math.random() * SIZE);
-                        int disparoMaquinaColumna = (int) (Math.random() * SIZE);
-                        System.out.println("La máquina dispara en la casilla " + (disparoMaquinaFila + 1) + "-" + (disparoMaquinaColumna + 1));
-                        aciertoMaquina = tableroJugador.disparar(disparoMaquinaFila, disparoMaquinaColumna);
+                for (int i = 0; i < SIZE; i++) {
+                    for (int j = 0; j < SIZE; j++) {
+
+                        try {
+                            System.out.println("¿En qué fila desea disparar?");
+                            int disparoFila = teclado.nextInt() - 1;
+                            System.out.println("¿En qué columna desea disparar?");
+                            int disparoCol = teclado.nextInt() - 1;
+                            aciertoJugador = tableroMaquina.disparar(disparoFila, disparoCol);
+
+                            //Realizamos la jugada de la máquina en el caso de que el jugador haya fallado
+                            if (!aciertoJugador) {
+                                System.out.println("Agua");
+                                int disparoMaquinaFila = i;
+                                int disparoMaquinaColumna = j;
+                                System.out.println("La máquina dispara en la casilla " + (disparoMaquinaFila + 1) + "-" + (disparoMaquinaColumna + 1));
+                                aciertoMaquina = tableroJugador.disparar(disparoMaquinaFila, disparoMaquinaColumna);
+                                if(aciertoMaquina){
+                                    break;
+                                }
+
+                            }
+
+                        } catch (InputMismatchException e) {
+                            System.out.println("Introduzca caracteres numéricos del 1 al 10.");
+                        }
                     }
-
-                } catch (InputMismatchException e) {
-                    System.out.println("Introduzca caracteres numéricos del 1 al 10.");
+                    if(aciertoMaquina){
+                        break;
+                    }
                 }
-            } while (!aciertoJugador && !aciertoMaquina);
 
             //Mostramos un mensaje dependiendo del ganador
             if (aciertoJugador) {
