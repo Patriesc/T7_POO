@@ -25,6 +25,7 @@ public class Main {
                     case 2:
                         break;
                     case 3:
+                        ejercicio3.guerraBarcos(teclado);
                         break;
                     case 4:
                         break;
