@@ -1,7 +1,7 @@
 package poo;
 
 public class Cuadricula {
-    private final int SIZE = 10;
+    protected final int SIZE = 10;
     private char[][] tablero = new char[SIZE][SIZE];
     private final char barco = 'X';
     private final char agua = '~';

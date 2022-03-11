@@ -1,33 +1,39 @@
 package poo;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Ejercicio3 {
+public class Ejercicio3 extends Cuadricula{
     private int filaSeleccionada, columnaSeleccionada;
     private boolean acierto;
 
     public void guerraBarcos(Scanner teclado) {
         Cuadricula tablero = new Cuadricula();
         tablero.visualizacion();
-        System.out.println("¿En qué fila quieres depositar el barco");
-        int filaBarco = teclado.nextInt() - 1;
-        System.out.println("¿En qué columna quieres depositar el barco");
-        int colBarco = teclado.nextInt() - 1;
-        tablero.depositarBarco(filaBarco, colBarco);
+        int filaBarco = (int) (Math.random() * SIZE) + 1;
+        int colBarco = (int) (Math.random() * SIZE) + 1;
+        tablero.depositarBarco(filaBarco - 1, colBarco - 1);
 
         do {
-            tablero.visualizacion();
+            try {
+                System.out.println("Escoja una fila: ");
+                filaSeleccionada = teclado.nextInt() - 1;
+                System.out.println("Escoja una columna: ");
+                columnaSeleccionada = teclado.nextInt() - 1;
 
-            System.out.println("Escoja una fila: ");
-            filaSeleccionada = teclado.nextInt() -1;
-            System.out.println("Escoja una columna: ");
-            columnaSeleccionada = teclado.nextInt() - 1;
-
-            acierto = tablero.disparar(filaSeleccionada, columnaSeleccionada);
-            if(acierto){
-                System.out.println("¡Has acertado!");
-            }else{
-                System.out.println("Inténtelo de nuevo.");
+                try {
+                    acierto = tablero.disparar(filaSeleccionada, columnaSeleccionada);
+                }catch (IndexOutOfBoundsException e){
+                    System.out.println("No se puede seleccionar esa casilla.");
+                }
+                if (acierto) {
+                    System.out.println("¡Has acertado!");
+                    tablero.visualizacion();
+                } else {
+                    System.out.println("Inténtelo de nuevo.");
+                }
+            }catch (InputMismatchException e) {
+                System.out.println("Introduzca caracteres numéricos.");
             }
         } while (!acierto);
 
