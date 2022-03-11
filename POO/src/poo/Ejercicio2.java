@@ -43,8 +43,8 @@ Scanner teclado = new Scanner(System.in);
     }
     private void menu() {
         System.out.println("--Menu--");
-        System.out.println("1. Mostrar clientes");
-        System.out.println("2. Añadir cliente");
-        System.out.println("3. Salir");
+        System.out.println("1 - Mostrar clientes");
+        System.out.println("2 - Añadir cliente");
+        System.out.println("3 - Salir");
     }
 }
