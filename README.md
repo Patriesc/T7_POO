@@ -6,4 +6,4 @@ Entrega realizada por Chiara Boccaletti, Patricia Sanz Escurin y Manuel Anton Ca
 ### Ejercicio 1: Los dados
 ### Ejercicio 2: Los clientes
 ### Ejercicio 3: Micro guerra de barcos (versión 3)
-### Micro guerra de barcos (versión 4)
+### Ejercicio 4: Micro guerra de barcos (versión 4)
