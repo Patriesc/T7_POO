@@ -23,6 +23,7 @@ public class Main {
                     case 1:
                         break;
                     case 2:
+                        ejercicio2.clientes(Scanner teclado);
                         break;
                     case 3:
                         ejercicio3.guerraBarcosv3(teclado);
