@@ -7,7 +7,7 @@ public class Ejercicio3 extends Cuadricula{
     private int filaSeleccionada, columnaSeleccionada;
     private boolean acierto;
 
-    public void guerraBarcos(Scanner teclado) {
+    public void guerraBarcosv3(Scanner teclado) {
         Cuadricula tablero = new Cuadricula();
         tablero.visualizacion();
         int filaBarco = (int) (Math.random() * SIZE) + 1;

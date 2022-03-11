@@ -25,9 +25,10 @@ public class Main {
                     case 2:
                         break;
                     case 3:
-                        ejercicio3.guerraBarcos(teclado);
+                        ejercicio3.guerraBarcosv3(teclado);
                         break;
                     case 4:
+                        ejercicio4.guerraBarcosv4(teclado);
                         break;
                     case 5:
                         System.out.println("¡Muchas gracias!");
