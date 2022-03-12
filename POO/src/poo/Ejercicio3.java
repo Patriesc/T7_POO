@@ -8,12 +8,14 @@ public class Ejercicio3 extends Cuadricula{
     private boolean acierto;
 
     public void guerraBarcosv3(Scanner teclado) {
+        // Creamos una cuadrícula y colocamos un barco de forma aleatoria
         Cuadricula tablero = new Cuadricula();
         tablero.visualizacion();
         int filaBarco = (int) (Math.random() * SIZE) + 1;
         int colBarco = (int) (Math.random() * SIZE) + 1;
         tablero.depositarBarco(filaBarco - 1, colBarco - 1);
 
+        // El jugador realiza disparos hasta que acierte
         do {
             try {
                 System.out.println("Escoja una fila: ");
@@ -26,6 +28,8 @@ public class Ejercicio3 extends Cuadricula{
                 }catch (IndexOutOfBoundsException e){
                     System.out.println("No se puede seleccionar esa casilla.");
                 }
+
+                // Mostramos el resultado
                 if (acierto) {
                     System.out.println("¡Has acertado!");
                     tablero.visualizacion();
