@@ -1,8 +1,6 @@
 package poo;
 
 public class Ejercicio1 {
-
-        /*
         //Creación de dados
         Dado dado6 = new Dado();
         Dado dado10 = new Dado(10);
@@ -23,7 +21,4 @@ public class Ejercicio1 {
         
         //Mostrar el resultado
         System.out.println("Al tirar los dados ha salido: \n Primer dado "+res1+"\n Segundo dado "+res2+"\n Tercer dado "+res3);
-
-         */
-
 }
