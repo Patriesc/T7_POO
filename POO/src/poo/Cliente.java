@@ -1,4 +1,4 @@
-package poo;
+/* package poo;
 
 
 public class Cliente {
@@ -26,7 +26,10 @@ public class Cliente {
         this.numeroDeCliente = numeroDeCliente;
     }
 
-    /** ESTO NO FUNCIONA !!!!!!!
+ */
+
+    // ESTO NO FUNCIONA !!!!!!!
+
     
     package poo;
 
@@ -55,16 +58,21 @@ public class Cliente {
     public void setNumeroDeCliente(int numeroDeCliente) {
         this.numeroDeCliente = numeroDeCliente;
     }
-    
-    public String mostrar() {
-        return "Cliente: " + getNombre() + "\nNúmero de cliente: " + getNumeroDeCliente() + "\n";
+
+
+    public void mostrar() {
+        System.out.println( "Cliente: " + nombre + "\nNúmero de cliente: " + numeroDeCliente + "\n");
     }
+
+
+
+
 }
 
     
     
     
-     */
+
 
     
-}
+

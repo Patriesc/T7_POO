@@ -67,6 +67,7 @@ public class Ejercicio4 extends Cuadricula {
 
         } catch (InputMismatchException | IndexOutOfBoundsException e) {
             System.out.println("Los caracteres introducidos o la casilla no son válidos.");
+            teclado.nextLine();
         }
 
     }

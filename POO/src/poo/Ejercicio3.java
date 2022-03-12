@@ -38,6 +38,7 @@ public class Ejercicio3 extends Cuadricula{
                 }
             }catch (InputMismatchException e) {
                 System.out.println("Introduzca caracteres numéricos.");
+                teclado.nextLine();
             }
         } while (!acierto);
 

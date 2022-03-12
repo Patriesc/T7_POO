@@ -1,4 +1,5 @@
 package poo;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -6,11 +7,11 @@ import java.util.Scanner;
 
 
 public class Ejercicio2 {
-private  ArrayList<Cliente> clientes = new ArrayList<>();
-Random rd = new Random();
-Scanner teclado = new Scanner(System.in);
+    private ArrayList<Cliente> clientes = new ArrayList<>();
+    Random rd = new Random();
+    Scanner teclado = new Scanner(System.in);
 
-    public void clientes(Scanner teclado){
+    public void clientes(Scanner teclado) {
         int opcion = 0;
         int bandera = 0;
         do {
@@ -21,9 +22,9 @@ Scanner teclado = new Scanner(System.in);
                 teclado.nextLine();
                 switch (opcion) {
                     case 1:
-                        clientes.forEach(c -> System.out.println("Cliente: " + c.getNombre() + "\nNúmero de cliente: " + c.getNumeroDeCliente() + "\n"));
-
-                         // clientes.forEach(c -> c.mostrar()); ESTO NO FUNCIONA
+                        //   clientes.forEach(c -> System.out.println("Cliente: " + c.getNombre() + "\nNúmero de cliente: " + c.getNumeroDeCliente() + "\n"));
+                        //  ESTO NO FUNCIONA
+                        clientes.forEach(c -> c.mostrar());
                         break;
                     case 2:
                         System.out.println("¿Cuál es el nombre del cliente?");
@@ -41,14 +42,15 @@ Scanner teclado = new Scanner(System.in);
                     default:
                         break;
                 }
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("Introduzca un caracter numérico");
                 teclado.nextLine();
             }
-            
-        } while (opcion !=3);
-        
+
+        } while (opcion != 3);
+
     }
+
     private void menu() {
         System.out.println("--Menu--");
         System.out.println("1 - Mostrar clientes");
