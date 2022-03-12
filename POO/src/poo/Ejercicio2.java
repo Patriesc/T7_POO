@@ -22,6 +22,8 @@ Scanner teclado = new Scanner(System.in);
                 switch (opcion) {
                     case 1:
                         clientes.forEach(c -> System.out.println("Cliente: " + c.getNombre() + "\nNúmero de cliente: " + c.getNumeroDeCliente() + "\n"));
+
+                         // clientes.forEach(c -> c.mostrar()); ESTO NO FUNCIONA
                         break;
                     case 2:
                         System.out.println("¿Cuál es el nombre del cliente?");
