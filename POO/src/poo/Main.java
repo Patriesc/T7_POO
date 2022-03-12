@@ -21,6 +21,7 @@ public class Main {
                 option = teclado.nextInt();
                 switch (option) {
                     case 1:
+                        ejercicio1.dados();
                         break;
                     case 2:
                         ejercicio2.clientes(teclado);

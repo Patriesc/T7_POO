@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Ejercicio2 {
     private ArrayList<Cliente> clientes = new ArrayList<>();
     Random rd = new Random();
-    Scanner teclado = new Scanner(System.in);
 
     public void clientes(Scanner teclado) {
         int opcion = 0;

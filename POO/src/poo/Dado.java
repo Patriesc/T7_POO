@@ -14,10 +14,6 @@ public class Dado {
         this.ultima_cara = 0;
     }
 
-    public void setN_caras(int n_caras) {
-        this.n_caras = n_caras;
-    }
-
     public int getN_caras() {
         return n_caras;
     }

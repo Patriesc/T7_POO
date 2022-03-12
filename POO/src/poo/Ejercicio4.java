@@ -38,10 +38,8 @@ public class Ejercicio4 extends Cuadricula {
                             //Realizamos la jugada de la máquina en el caso de que el jugador haya fallado
                             if (!aciertoJugador) {
                                 System.out.println("Agua");
-                                int disparoMaquinaFila = i;
-                                int disparoMaquinaColumna = j;
-                                System.out.println("La máquina dispara en la casilla " + (disparoMaquinaFila + 1) + "-" + (disparoMaquinaColumna + 1));
-                                aciertoMaquina = tableroJugador.disparar(disparoMaquinaFila, disparoMaquinaColumna);
+                                System.out.println("La máquina dispara en la casilla " + (i + 1) + "-" + (j + 1));
+                                aciertoMaquina = tableroJugador.disparar(i, j);
                                 if(aciertoMaquina){
                                     break;
                                 }
