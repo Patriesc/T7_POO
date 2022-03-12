@@ -21,8 +21,7 @@ public class Ejercicio2 {
                 teclado.nextLine();
                 switch (opcion) {
                     case 1:
-                        //   clientes.forEach(c -> System.out.println("Cliente: " + c.getNombre() + "\nNúmero de cliente: " + c.getNumeroDeCliente() + "\n"));
-                        //  ESTO NO FUNCIONA
+
                         clientes.forEach(c -> c.mostrar());
                         break;
                     case 2:
@@ -35,8 +34,6 @@ public class Ejercicio2 {
                         clientes.add(cliente);
 
                         System.out.println("Cliente n.°" + bandera + " [" + nombre + "] añadido");
-                        break;
-                    case 3:
                         break;
                     default:
                         break;

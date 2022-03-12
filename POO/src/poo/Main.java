@@ -49,8 +49,6 @@ public class Main {
     }
 
 
-
-
     private static void menu() {
 
         System.out.println("1. Los dados");

@@ -21,9 +21,9 @@ public class Dado {
     public int getUltima_cara() {
         return ultima_cara;
     }
-    
+
     public int tirar() {
-        this.ultima_cara = (int)(Math.random()*this.getN_caras()+1);
+        this.ultima_cara = (int) (Math.random() * this.getN_caras() + 1);
         return this.getUltima_cara();
     }
 }

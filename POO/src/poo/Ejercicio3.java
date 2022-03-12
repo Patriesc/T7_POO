@@ -3,7 +3,7 @@ package poo;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Ejercicio3 extends Cuadricula{
+public class Ejercicio3 extends Cuadricula {
     private int filaSeleccionada, columnaSeleccionada;
     private boolean acierto;
 
@@ -25,7 +25,7 @@ public class Ejercicio3 extends Cuadricula{
 
                 try {
                     acierto = tablero.disparar(filaSeleccionada, columnaSeleccionada);
-                }catch (IndexOutOfBoundsException e){
+                } catch (IndexOutOfBoundsException e) {
                     System.out.println("No se puede seleccionar esa casilla.");
                 }
 
@@ -36,7 +36,7 @@ public class Ejercicio3 extends Cuadricula{
                 } else {
                     System.out.println("Inténtelo de nuevo.");
                 }
-            }catch (InputMismatchException e) {
+            } catch (InputMismatchException e) {
                 System.out.println("Introduzca caracteres numéricos.");
                 teclado.nextLine();
             }
