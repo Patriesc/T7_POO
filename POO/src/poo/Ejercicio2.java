@@ -1,5 +1,6 @@
 package poo;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -13,29 +14,34 @@ Scanner teclado = new Scanner(System.in);
         int opcion = 0;
         int bandera = 0;
         do {
-            menu();
-            System.out.println("¿Qué quieres hacer?");
-            opcion = teclado.nextInt();
-            teclado.nextLine();
-            switch (opcion){
-                case 1:
-                clientes.forEach(c -> System.out.println("Cliente: " + c.getNombre() + "\nNúmero de cliente: " + c.getNumeroDeCliente() + "\n"));
-                break;
-                case 2:
-                    System.out.println("¿Cuál es el nombre del cliente?");
-                    String nombre = teclado.nextLine();
-                    
-                    int numeroDeCliente = rd.nextInt(100000001);
-                    bandera++;
-                    Cliente cliente = new Cliente(nombre, numeroDeCliente);
-                    clientes.add(cliente);
-                    
-                    System.out.println("Cliente n.°" + bandera + " [" + nombre + "] añadido");
-                    break;
+            try {
+                menu();
+                System.out.println("¿Qué quieres hacer?");
+                opcion = teclado.nextInt();
+                teclado.nextLine();
+                switch (opcion) {
+                    case 1:
+                        clientes.forEach(c -> System.out.println("Cliente: " + c.getNombre() + "\nNúmero de cliente: " + c.getNumeroDeCliente() + "\n"));
+                        break;
+                    case 2:
+                        System.out.println("¿Cuál es el nombre del cliente?");
+                        String nombre = teclado.nextLine();
+
+                        int numeroDeCliente = rd.nextInt(100000001);
+                        bandera++;
+                        Cliente cliente = new Cliente(nombre, numeroDeCliente);
+                        clientes.add(cliente);
+
+                        System.out.println("Cliente n.°" + bandera + " [" + nombre + "] añadido");
+                        break;
                     case 3:
-                    break;
-                default:
-                    break;
+                        break;
+                    default:
+                        break;
+                }
+            }catch (InputMismatchException e){
+                System.out.println("Introduzca un caracter numérico");
+                teclado.nextLine();
             }
             
         } while (opcion !=3);
