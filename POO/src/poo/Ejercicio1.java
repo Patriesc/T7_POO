@@ -1,8 +1,7 @@
 package poo;
 
 public class Ejercicio1 {
-
-        /*
+        
         //Creación de dados
         Dado dado6 = new Dado();
         Dado dado10 = new Dado(10);
