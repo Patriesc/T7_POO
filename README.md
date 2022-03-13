@@ -5,6 +5,11 @@ Entrega realizada por Chiara Boccaletti, Patricia Sanz Escurín y Manuel Antón 
 ### Ejercicio 1: Los dados
 En este ejercicio hemos creado una clase Dado con un atributo para el número de caras y otro para almacenar la última cara obtenida, después, se ha creado un método para simular la tirada. Con esto, se ha creado un algoritmo que crea tres dados y estos se lanzan hasta que la suma sea mayor o igual a veinte.
 
+El diagrama de flujo relativo al ejercicio es:
+
+![Ejercicio1_flujo drawio](https://user-images.githubusercontent.com/98779707/158072379-6ceab021-6914-416f-bbdc-f868ab8a7022.svg)
+
+
 ### Ejercicio 2: Los clientes
 Hemos creado una clase Cliente en la que se almacenan los datos de este, en el programa se permite añadir clientes y mostrar los clientes añadidos.
 
