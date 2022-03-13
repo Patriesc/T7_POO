@@ -1,6 +1,6 @@
 # Tema 7: Programación Orientada a Objetos
 
-Entrega realizada por Chiara Boccaletti, Patricia Sanz Escurin y Manuel Anton Carrasco.
+Entrega realizada por Chiara Boccaletti, Patricia Sanz Escurín y Manuel Antón Martínez-Carrasco.
 
 ### Ejercicio 1: Los dados
 En este ejercicio hemos creado una clase Dado con un atributo para el número de caras y otro para almacenar la última cara obtenida, después, se ha creado un método para simular la tirada. Con esto, se ha creado un algoritmo que crea tres dados y estos se lanzan hasta que la suma sea mayor o igual a veinte.
