@@ -1,7 +1,13 @@
 # Tema 7: Programación Orientada a Objetos
 
 Entrega realizada por Chiara Boccaletti, Patricia Sanz Escurín y Manuel Antón Martínez-Carrasco.
+
 El link correspondiente al repositorio de GitHub es: https://github.com/Patriesc/T7_POO.git
+
+### UML
+
+![UML drawio](https://user-images.githubusercontent.com/98825807/158357828-8e7c6584-7834-43fa-9570-8c6bcaf26dc3.svg)
+
 
 ### Ejercicio 1: Los dados
 En este ejercicio hemos creado una clase Dado con un atributo para el número de caras y otro para almacenar la última cara obtenida, después, se ha creado un método para simular la tirada. Con esto, se ha creado un algoritmo que crea tres dados y estos se lanzan hasta que la suma sea mayor o igual a veinte.
