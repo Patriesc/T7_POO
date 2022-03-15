@@ -11,6 +11,7 @@ public class Ejercicio3 extends Cuadricula {
         // Creamos una cuadrícula y colocamos un barco de forma aleatoria
         Cuadricula tablero = new Cuadricula();
         tablero.visualizacion();
+        System.out.println("Puede usar -1 en la fila o columna para abandonar el juego.");
         int filaBarco = (int) (Math.random() * SIZE) + 1;
         int colBarco = (int) (Math.random() * SIZE) + 1;
         tablero.depositarBarco(filaBarco - 1, colBarco - 1);
@@ -22,6 +23,10 @@ public class Ejercicio3 extends Cuadricula {
                 filaSeleccionada = teclado.nextInt() - 1;
                 System.out.println("Escoja una columna: ");
                 columnaSeleccionada = teclado.nextInt() - 1;
+
+                if(filaSeleccionada == -2 || columnaSeleccionada == -2){
+                    break;
+                }
 
                 try {
                     acierto = tablero.disparar(filaSeleccionada, columnaSeleccionada);
@@ -40,7 +45,7 @@ public class Ejercicio3 extends Cuadricula {
                 System.out.println("Introduzca caracteres numéricos.");
                 teclado.nextLine();
             }
-        } while (!acierto);
+        } while (!acierto || filaSeleccionada == -1 || columnaSeleccionada == -1);
 
     }
 }
